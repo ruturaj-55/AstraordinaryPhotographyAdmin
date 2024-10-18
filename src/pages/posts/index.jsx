@@ -48,6 +48,7 @@ const PostForm = () => {
       Description: formDataObj["description"],
       CapturedOn: date.getTime() / 1000,
       PostedOn: Timestamp.now()["seconds"],
+      ObjectName: formDataObj["object-name"],
     };
 
     try {
@@ -91,6 +92,21 @@ const PostForm = () => {
                 type="string"
                 name="about-shot"
                 placeholder="Enter Title"
+              />
+            </Col>
+          </Row>
+        </Form.Group>
+
+        <Form.Group className="mb-5" controlId="object-name">
+          <Row>
+            <Col>
+              <Form.Label>Enter Object Name</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control
+                type="string"
+                name="object-name"
+                placeholder="Enter Object Name"
               />
             </Col>
           </Row>
